@@ -59,23 +59,27 @@ class App extends Component {
   }
 
   render() {
+     const subtitle = 'Put your life in the hands of a computer';
     return (
       <div>
-      <div>
-       <Header />
-       <Action handleSelection={this.handleSelection}/>
-       <OptionList 
-        options={this.state.options}
-        handleDeleteOptionList={this.handleDeleteOptionList}
-        handleDeleteOption={this.handleDeleteOption}/>
-       <OptionBar handleAddOption={this.handleAddOption}/>
-      </div>
-
-       <SelectedOptionModal
+       <Header subtitle={subtitle} />
+         <div className = "container">
+           <Action handleSelection={this.handleSelection}/>
+           <div className = "widget">
+               <OptionList 
+                options={this.state.options}
+                handleDeleteOptionList={this.handleDeleteOptionList}
+                handleDeleteOption={this.handleDeleteOption}/>
+               <OptionBar handleAddOption={this.handleAddOption}/>
+            </div>
+        </div>
+         <SelectedOptionModal
           selectedOption={this.state.selectedOption}
           handleClearSelectedOption={this.handleClearSelectedOption}
         />
       </div>
+
+      
     );
   }
 }

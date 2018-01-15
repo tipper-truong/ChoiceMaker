@@ -2,16 +2,14 @@ import React from 'react';
 
 const OptionListItem = (props) => {
 	return (
-		<div>
-		<li>
-			{props.option}
-		</li>
+		<div className="option">
+		<p className="option__text">{props.index}. {props.option}</p>
 		<button 
-
+		className="button button-link"
 		onClick={(event) => {
 			props.handleDeleteOption(props.option);
 			
-		}}>Remove</button>
+		}}>remove</button>
 		</div>
 	);
 };
