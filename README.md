@@ -1,2 +1,2 @@
 # Indecision
-Let the computer decide what you should do!
+ChoiceMaker is a React.js Application that helps you become less indecisive
